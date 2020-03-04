@@ -1,6 +1,7 @@
 package org.ambpro.katatennis.model;
 
 public class Player {
+	
     private final String playerName;
     private int playerScore;
 

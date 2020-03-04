@@ -3,17 +3,12 @@ package org.ambpro.katatennis.services;
 import java.util.stream.Stream;
 
 import org.ambpro.katatennis.model.Player;
+import org.ambpro.katatennis.utils.CommonConstants;
 
 public class TennisGame {
-    private static final String DEUCE_GAME_SCORE = "Deuce";
-    private static final int ONE_POINT = 1;
-    private static final String GAME_SCORE_ADVANTAGE = " Advantage";
-    private static final String GAME_SCORE_WINS = " Wins";
     private Player player1;
     private Player player2;
     private String gameScore;
-    private static final String HYPHEN = "-";
-    private static final String SAME_GAME_SCORE = "All";
 
     public TennisGame() {
         this("Player 1", "Player 2");
@@ -22,7 +17,7 @@ public class TennisGame {
     public TennisGame(String player1Name, String player2Name) {
         player1 = new Player(player1Name);
         player2 = new Player(player2Name);
-        gameScore = Score.LOVE + HYPHEN + SAME_GAME_SCORE;
+        gameScore = Score.LOVE + CommonConstants.HYPHEN + CommonConstants.SAME_GAME_SCORE;
     }
 
     public Player getPlayer1() {
@@ -35,11 +30,11 @@ public class TennisGame {
 
     public String getGameScore() {
         if (hasScoresEqual()) {
-            gameScore = isPointGreaterOrEqualForty() ? DEUCE_GAME_SCORE : Score.getScore(player1.getPlayerScore()) + HYPHEN + SAME_GAME_SCORE;
+            gameScore = isPointGreaterOrEqualForty() ? CommonConstants.DEUCE_GAME_SCORE : Score.getScore(player1.getPlayerScore()) + CommonConstants.HYPHEN + CommonConstants.SAME_GAME_SCORE;
         } else if (isAnyPlayerCanWin()) {
-            gameScore = isAnyPlayerLeadByOnePoint() ? getTopPlayerName() + GAME_SCORE_ADVANTAGE : getTopPlayerName() + GAME_SCORE_WINS;
+            gameScore = isAnyPlayerLeadByOnePoint() ? getTopPlayerName() + CommonConstants.GAME_SCORE_ADVANTAGE : getTopPlayerName() + CommonConstants.GAME_SCORE_WINS;
         } else {
-            gameScore = Score.getScore(player1.getPlayerScore()) + HYPHEN + Score.getScore(player2.getPlayerScore());
+            gameScore = Score.getScore(player1.getPlayerScore()) + CommonConstants.HYPHEN + Score.getScore(player2.getPlayerScore());
         }
         return gameScore;
     }
@@ -61,7 +56,7 @@ public class TennisGame {
     }
 
     private boolean isAnyPlayerLeadByOnePoint() {
-        return ONE_POINT == Math.abs(player1.getPlayerScore() - player2.getPlayerScore());
+        return CommonConstants.ONE_POINT == Math.abs(player1.getPlayerScore() - player2.getPlayerScore());
     }
 
     private enum Score {

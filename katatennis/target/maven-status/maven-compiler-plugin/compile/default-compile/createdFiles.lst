@@ -2,4 +2,5 @@ org/ambpro/katatennis/model/Player.class
 org/ambpro/katatennis/services/PlayTennis.class
 org/ambpro/katatennis/services/TennisGame$Score.class
 org/ambpro/katatennis/services/TennisGame.class
+org/ambpro/katatennis/utils/CommonConstants.class
 org/ambpro/katatennis/App.class

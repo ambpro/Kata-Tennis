@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.ambpro.katatennis.tests.PlayTennisTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 s - in org.ambpro.katatennis.tests.PlayTennisTest
