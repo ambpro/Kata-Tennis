@@ -39,7 +39,7 @@ The scoring system is rather simple:
 From console,
 
 1. Move to the directory where you have cloned the project
-2. Run mvn clean install to build the application
-3. Launch the application using mvn exec:java
+2. Run `mvn clean install` to build the application
+3. Launch the application using `mvn exec:java`
 4. Follow the onscreen instructions and proceed with the game until a player is a winner
 5. You can exit anytime by using 'C' or 'c' when prompted after starting the game or Terminate using abort command (Ctrl+C / Command+C)
