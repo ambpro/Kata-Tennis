@@ -27,7 +27,7 @@ The scoring system is rather simple:
 
 1. Clone the project by following the setup instructions
 2. Open the command prompt / terminal from project repository
-3. Move to the project directory `cd katatennis`
+3. Move to the project sub-directory `cd katatennis`
 3. Run `mvn clean test`
 
 ### Run from IDE
@@ -38,7 +38,7 @@ The scoring system is rather simple:
 ## Run Application
 From console,
 
-1. Move to the directory where you have cloned the project
+1. Move to the sub-directory `cd katatennis` from the project repository
 2. Run `mvn clean install` to build the application
 3. Launch the application using `mvn exec:java`
 4. Follow the onscreen instructions and proceed with the game until a player is a winner
